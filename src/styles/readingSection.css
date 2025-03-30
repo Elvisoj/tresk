@@ -1,0 +1,82 @@
+.reading-section {
+  border-top: 20px solid var(--darkTone);
+  padding: 20px 10%;
+  display: flex;
+  gap: 30px;
+}
+.right-side {
+  flex: 3;
+}
+.left-side {
+  flex: 7;
+}
+.singlePostTitle {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.singlePostContext {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.CommentDialogBox {
+  margin-top: 30px;
+
+  font-size: 1.4rem;
+
+  textarea {
+    border-radius: 0;
+  }
+}
+
+.reaction-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  background: var(--pryClr);
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+.reactionType {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.reactionSymbol {
+  font-size: 2rem;
+  text-align: center;
+}
+.reactionName {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.reactionSymbol:hover {
+  transform: scale(1.2);
+}
+
+.comment {
+  padding: 20px 10px;
+  border-bottom: 5px solid var(--pryClr);
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.comment img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.comment .commenteeName {
+  font-weight: 600;
+}
+.comment .commentMessage {
+  color: var(--darkTone);
+}

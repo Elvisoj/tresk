@@ -1,0 +1,118 @@
+.header {
+  position: relative;
+  padding: 30px 10%;
+  position: sticky;
+  z-index: 900;
+  top: 0;
+  background: var(--bgClr);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  border-bottom: 2px solid var(--brightClr);
+  border-top: 2px solid var(--brightClr);
+  cursor: pointer;
+  z-index: 1000;
+}
+.logo span {
+  color: var(--brightClr);
+}
+.search-bar {
+  margin: 0;
+}
+.search-bar input {
+  border-radius: 30px;
+  margin-top: 20px;
+  border-color: var(--lightBlue);
+}
+
+.search-bar input:focus,
+.search-bar input:hover {
+  border-color: var(--darkTone);
+  outline-color: var(--darkTone);
+  color: var(--darkTone);
+  opacity: 0.6;
+}
+.list-block {
+  background: var(--pryClr);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 10px 40px;
+}
+
+.list-item {
+  color: var(--darkTone);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.list-item:hover {
+  color: var(--brightClr);
+}
+
+.handburger-menu {
+  width: 40px;
+  display: none;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 40rem) {
+  .header {
+    padding: 0;
+  }
+  .navbar {
+    background: var(--darkTone);
+    padding: 20px 10%;
+  }
+  .search-bar {
+    margin: 0 10%;
+  }
+  .logo {
+    /* color: var(--pryClr); */
+  }
+  .list-block {
+    position: absolute;
+    top: -1000%;
+    left: 0;
+    border-radius: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: var(--darkTone);
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 160px 10% 30px;
+
+    transition: top 1s ease-in-out;
+
+    .list-item {
+      color: var(--pryClr);
+      border-radius: 30px;
+      border: 2px solid gray;
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  .list-block.active {
+    position: absolute;
+    top: 0;
+    transition: top 1s ease-in-out;
+  }
+  .handburger-menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+}

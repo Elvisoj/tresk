@@ -1,0 +1,64 @@
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border: 2px solid #3498db; /* Changed border color */
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #3498db; /* Changed background color */
+  color: white;
+  text-align: left;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.table .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table button {
+  background-color: #3498db; /* Button background color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.table button:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+}
+.postsNotAvailable {
+  padding: 30px;
+  font-size: 1.2rem;
+}
+.back-todb {
+  width: fit-content;
+  margin-top: 30px;
+}

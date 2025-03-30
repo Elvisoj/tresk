@@ -1,0 +1,33 @@
+.aboutUs,
+.aboutMe {
+  background: lightseagreen;
+  padding: 30px;
+  color: var(--pryClr);
+  margin-bottom: 50px;
+
+  .title {
+    font-size: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 4px solid var(--lightBlue);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  p {
+    font-size: 1.3rem;
+    text-align: justify;
+  }
+  a {
+    font-size: 1.2rem;
+    color: blue;
+  }
+  a:hover {
+    color: var(--brightClr);
+  }
+}

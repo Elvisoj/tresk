@@ -1,0 +1,65 @@
+/* :root {
+  --lightBlue: #d0eaf5;
+} */
+.footer-wrapper {
+  padding: 10px 10%;
+  background: var(--lightBlue);
+}
+.project {
+  text-align: left;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 4px solid var(--darkTone);
+
+  h2 {
+    border-top: 2px solid var(--lightBlue);
+    border-bottom: 2px solid var(--darkTone);
+    padding: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: var(--pryClr);
+    width: fit-content;
+    margin-bottom: 40px;
+    color: var(--brightClr);
+  }
+}
+.project-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+.projectLink {
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.projectLink:hover {
+  color: #007bff;
+  background: var(--pryClr);
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--pryClr);
+}
+.socialMediaBrand i {
+  font-size: 1.8rem;
+  color: #000;
+}
+.socialMediaBrand i:hover {
+  color: #007bff;
+}
+.socialMediaBrand i:active {
+  color: #0056b3;
+}
