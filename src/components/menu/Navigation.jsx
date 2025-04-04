@@ -7,7 +7,7 @@ function Navigation(props) {
     <ul ref={props.navigationRef} className="list-block">
         <li className="list-item"><Link to="/">Home-Section</Link></li>
         <li className="list-item"><Link to="/blog">Blog</Link></li>
-        <li className="list-item"><Link to="/dashboard">Admin-Section</Link></li>
+        {/* <li className="list-item"><Link to="/dashboard">Admin-Section</Link></li> */}
         <li className="list-item"><Link to="/about">About-Section</Link></li>
     </ul>
   )

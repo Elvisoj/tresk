@@ -10,6 +10,13 @@ lerna-debug.log*
 node_modules
 dist
 note.txt
+k.js
+TOBEUSED.jsx
+
+# Build directories
+# If you are using a build system, add the build output directory here
+# For example, if you are using Webpack, add the following line:
+# build/
 dist-ssr
 *.local
 
@@ -24,3 +31,4 @@ dist-ssr
 *.sln
 *.sw?
 *.txt
+*.env

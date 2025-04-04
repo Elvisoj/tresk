@@ -1,17 +1,21 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { defaultPosts, defaultPostsComments } from '../api/api';
-import assets from '../assets/assets';
-import SortArray from '../components/utils/SortArray';
 import UseLocalStorage from '../components/hookes/UseLocalStorage';
+import { fetchComments, fetchPosts } from '../api/fetchData';
 
 const dashboardContext = createContext();
 
 
 function ContextProvider(props) {
     const { getData } = UseLocalStorage()
-    const [ posts, setPosts ] = useState(defaultPosts || [])
-    const [ postsComments, setPostsComments ] = useState(defaultPostsComments || [])
-    const [ latestPosts, setLatestPosts ] = useState(SortArray(posts))
+    const [ posts, setPosts ] = useState([])
+    const [ postsComments, setPostsComments ] = useState([])
+    
+    const [postLoading, setPostLoading ] = useState(true)
+    const [postErrors, setPostErrors ] = useState(null)
+    const [commentLoading, setCommentLoading ] = useState(true)
+    const [commentErrors, setCommentErrors ] = useState(null)
+
     const [ formData, setFormData ] = useState({
         title: "",
         author: "",
@@ -58,13 +62,21 @@ function ContextProvider(props) {
     const ToggleMenuOnFxn = ()=>{ setDisplayMenu(true) }
     const ToggleMenuOffFxn = ()=>{ setDisplayMenu(false) }
 
+    
+    useEffect(() => {
+        fetchPosts(setPosts, setPostLoading, setPostErrors);
+        fetchComments(setPostsComments, setCommentLoading, setCommentErrors);
+    }, []);
+    
     const data = {
         posts, setPosts,
-        latestPosts, setLatestPosts,
         searchTerm, setSearchTerm,
         formData, setFormData,
         currentPost, setCurentPost,
         postsComments, setPostsComments,
+
+        postLoading, setPostLoading,
+        postErrors, setPostErrors ,
 
         // BOOLEANS
         isDbClick, setIsDbClick,

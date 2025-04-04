@@ -1,0 +1,38 @@
+.loginContainer {
+  padding: 20px 10%;
+}
+.form-widget {
+  box-shadow: 3px 4px 1px rgba(0, 0, 0, 0.4),
+    -3px -4px 1px rgba(199, 194, 194, 0.4);
+  background: var(--pryClr);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin: 20px 10%;
+  padding: 30px 20px;
+}
+.form-widget h1 {
+  text-transform: uppercase;
+  color: var(--brightClr);
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--brightClr);
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+.userDetails {
+  margin-top: 20px;
+}
+.button.block {
+  background: var(--brightClr);
+  color: var(--pryClr);
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.button.block:hover {
+  background: var(--pryClr);
+  color: var(--brightClr);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2), -2px -2px 1px rgba(0, 0, 0, 0.2);
+}

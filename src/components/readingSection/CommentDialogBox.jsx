@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import getPost from '../utils/GetPost';
 import { UseDashboardContext } from '../../dataManagement/dashboardContext';
+import { createComments } from '../../api/createPosts';
+
+import { fetchComments} from '../../api/fetchData';
 
 function CommentDialogBox(props) {
-  const { posts } = UseDashboardContext()
+  const { posts, setPostsComments } = UseDashboardContext()
+  const [ loading, setLoading ] = useState(true);
+  const [ error, setError ] = useState(null);
+
   const { postId } = props
   const randomId = uuidv4();
   const [userComment, setUserComment] = useState({
@@ -18,21 +23,23 @@ function CommentDialogBox(props) {
   });
 
   const handleOnChange = (e) => {
+  
     setUserComment({
       ...userComment,
-      userId:randomId,
+      userId: e.target.name === 'userEmail' ? randomId : userComment.userId,
+      userName: e.target.name === 'userEmail' ? e.target.value.split('@')[0] : userComment.userName,
+      userIcon: e.target.name === 'userEmail' ? `https://avatars.dicebear.com/api/avataaars/${e.target.value}.svg` : userComment.userIcon,
+      date: e.target.name === 'userEmail' ? Date.now().toString : userComment.date,
       [e.target.name]: e.target.value
     });
   };
 
-  const onSubmitForm = (e) => {
+  const onSubmitForm = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', userComment);
-    const selectedPosts = getPost(posts, postId).userComment;
-    // selectedPosts.userComment
-    console.log(selectedPosts)
+    await createComments(userComment, postId)
+    await fetchComments(setPostsComments, setLoading, setError);
   };
-
+  
   return (
     <div className='CommentDialogBox'>
       <form onSubmit={onSubmitForm}>

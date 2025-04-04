@@ -1,6 +1,10 @@
 import assets from "../assets/assets";
 import thumbnail from "../assets/backgroung-image.jpg"
 
+// const supabaseUrl = 'https://fwbqxyiqcjjtgjnweklw.supabase.co'
+// const supabaseKey = process.env.SUPABASE_KEY
+// const supabase = createClient(supabaseUrl, supabaseKey)
+
 
 export const defaultPosts = [
     {
@@ -42,7 +46,7 @@ export const defaultPosts = [
         context: "Discover the best places to visit in 2023 The atoms in liquid and solid states are held together by the forces of attraction. Since most of the materials used in engineering are solids and liquids, it is, therefore, desirable to understand the attractions that hold the atoms together. Such interatomic forces between the atoms are referred to as bonds. Without these interatomic and intermolecular forces, all matter would be in gaseous state due",
         thumbnail: thumbnail,
         isActive: false,
-        date: "2025-03-26",
+        created_at: "2025-03-26",
         category: "designs",
         reaction: {
             like: 90,

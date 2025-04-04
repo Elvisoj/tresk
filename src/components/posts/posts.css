@@ -25,6 +25,7 @@
 }
 .postImage {
   width: 100%;
+  aspect-ratio: 7/4;
 }
 .post-content {
   padding: 10px 20px;

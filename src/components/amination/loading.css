@@ -1,0 +1,117 @@
+.loading {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loading p {
+  opacity: 1;
+  animation: ParaOpaq 3s infinite forwards;
+}
+.bricks {
+  width: 300px;
+  height: 100px;
+  background: var(--pryClr);
+  display: grid;
+  grid-template-columns: repeat(5, 30px);
+  grid-template-rows: repeat(1, 30px);
+  gap: 20px;
+  padding: 20px;
+}
+.bricks div {
+  background: var(--brightClr);
+}
+.brick-1 {
+  animation: FirstMove 2s infinite forwards;
+}
+.brick-2 {
+  animation: SecondMove 2s infinite forwards;
+}
+.brick-3 {
+  animation: ThirdMove 2s infinite forwards;
+}
+.brick-4 {
+  animation: FourthMove 2s infinite forwards;
+}
+.brick-5 {
+  animation: FifthMove 2s infinite forwards;
+}
+@keyframes ParaOpaq {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes FirstMove {
+  0% {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+@keyframes SecondMove {
+  0% {
+    margin-top: 4px;
+  }
+  40% {
+    margin-top: 20px;
+  }
+  90% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 4px;
+  }
+}
+@keyframes ThirdMove {
+  0% {
+    margin-top: 8px;
+  }
+  30% {
+    margin-top: 20px;
+  }
+  80% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 8px;
+  }
+}
+@keyframes FourthMove {
+  0% {
+    margin-top: 12px;
+  }
+  20% {
+    margin-top: 20px;
+  }
+  70% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 12px;
+  }
+}
+@keyframes FifthMove {
+  0% {
+    margin-top: 16px;
+  }
+  10% {
+    margin-top: 20px;
+  }
+  60% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 16px;
+  }
+}
